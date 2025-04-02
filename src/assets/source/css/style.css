@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+:root {
+    --background: #111;
+    --default-color: #fff;
+    --header-height: 50px;
+    --header-border-height: 2px;
+    --table-background: #002429;
+    --header-background: #312a70;
+    --scrollbar-background: #312a70;
+    --header-button-bg: #262343;
+    --header-button-bg-active: #312a70;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track { 
+    width: 5px;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background-color: var(--scrollbar-background);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    height: 100%;
+    color: var(--default-color);
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background-color: var(--header-background);
+    border-bottom: var(--header-border-height) solid #fff;
+    height: var(--header-height);
+}
+
+header * {
+    user-select: none;
+}
+
+header h1 {
+    font-weight: 300;
+    color: var(--default-color);
+}
+
+header .logo {
+    margin-left: 15px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    list-style: none;
+    margin: 0;
+}
+
+header nav ul li button {
+    color: var(--default-color);
+    background-color: var(--header-button-bg);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 0;
+    font-size: 24px;
+    border: 1px solid #ddd;
+    border-right: 0;
+    text-transform: capitalize;
+}
+
+header nav ul li button:active {
+    background-color: var(--header-button-bg-active);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100% - var(--header-height) - var(--header-border-height));
+}
+
+main section {
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    resize: horizontal;
+}
+
+
+main section h2 {
+    text-transform: capitalize;
+    font-weight: 200;
+    margin: 1rem 0 1.5rem 0;
+    display: block;
+    position: sticky;
+}
+
+main section h2 strong {
+    font-weight: 200;
+    color: #878787;
+    text-transform: lowercase;
+}
+
+main section#processes__page table {
+    background-color: var(--table-background);
+    padding: 15px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+main section#processes__page table tr {
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+main section#processes__page table tr td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    position: relative;
+}
+main section#processes__page table tr {
+    display: flex;
+    flex-direction: row;
+}
+
+main section#processes__page table tr td:first-child {
+    width: 80px;
+}
+
+main section#processes__page table tr td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(15vw - 15px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+main section#processes__page table tr td .sort {
+    position: relative;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+main section#os-info .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+main section#os-info ul {
+    font-size: 20px;
+    width: auto;
+    border: 1px dashed #ddd;
+    margin-right: 15px;
+    min-height: 200px;
+    height: 200px;
+    padding: 5px 10px;
+}
+
+main section#os-info ul li {
+    list-style: none;
+    font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+main section#os-info ul li span {
+    margin: 0 25px 0 0;
+}
+
+main section#os-info ul li span.title {
+    color: #fff;
+}
+
+main section#os-info ul li .context {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: royalblue;
+}
+
+main section#os-info ul h3 {
+    font-weight: 200;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
