@@ -1,0 +1,22 @@
+{
+  "name": "system-monitor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aket0r/system-monitor.git"
+  },
+  "author": "aket0r",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aket0r/system-monitor/issues"
+  },
+  "homepage": "https://github.com/aket0r/system-monitor#readme",
+  "description": "",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
