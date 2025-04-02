@@ -3,9 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/source/css/style.css">
+    <link rel="stylesheet" href="assets/source/css/fontawesome-free-6.7.2-web/css/all.css">
     <title>System monitoring ver 1.0</title>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <h1>System Monitor</h1>
+        </div>
 
+        <div class="system-name">
+            <h1>$system.name</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <button id="processes">processes</button>
+                </li>
+                <li>
+                    <button id="history">history</button>
+                </li>
+                <li>
+                    <button id="config">config</button>
+                </li>
+                <li>
+                    <button id="debug">debug</button>
+                </li>
+                <li>
+                    <button id="console_dev">console/dev</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="processes__page">
+            <h2>processes: <span class="processes-length">0</span></h2>
+            <table class="container">
+                <tr class="title">
+                    <td>#1 
+                        <button class="sort sort-by-id">
+                            <i class="fa-solid fa-sort"></i></button></td>
+                    <td>pid 
+                        <button class="sort sort-by-pid">
+                            <i class="fa-solid fa-sort"></i></button></td>
+                        </button></td>
+                    <td>ppid 
+                        <button class="sort sort-by-ppid">
+                            <i class="fa-solid fa-sort"></i></button></td>
+                        </button></td>
+                    <td>name 
+                        <button class="sort sort-by-name">
+                            <i class="fa-solid fa-sort"></i></button></td>
+                        </button></td>
+                </tr>
+                <tbody class="container"></tbody>
+            </table>
+        </section>
+
+        <section id="os-info">
+            <h2>OS Info <strong class="loading-time">0</strong></h2>
+            <div class="container">
+                <ul>
+                    <h3>User</h3>
+                    <li class="username">
+                        <span class="title">username</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="homedir">
+                        <span class="title">homedir</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="arch">
+                        <span class="title">arch</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="release">
+                        <span class="title">release</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="type">
+                        <span class="title">type</span>
+                        <span class="context">-</span>
+                    </li>
+                </ul>
+                <ul>
+                    <h3>System</h3>
+                    <li class="machine">
+                        <span class="title">machine</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="tmpdir">
+                        <span class="title">tmpdir</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="platform">
+                        <span class="title">platform</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="endianness">
+                        <span class="title">endianness</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="totalmem">
+                        <span class="title">totalmem</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="uptime">
+                        <span class="title">uptime</span>
+                        <span class="context">-</span>
+                    </li>
+                </ul>
+                <ul>
+                    <h3>Network</h3>
+                    <li class="ethernet-0">
+                        <span class="title">ethernet-0</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="ethernet-1">
+                        <span class="title">ethernet-1</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="wifi-0">
+                        <span class="title">wifi-0</span>
+                        <span class="context">-</span>
+                    </li>
+                    <li class="wifi-1">
+                        <span class="title">wifi-1</span>
+                        <span class="context">-</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/source/js/main.js"></script>
+    <script src="assets/source/js/processes.js"></script>
 </body>
 </html>
