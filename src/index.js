@@ -1,3 +1,11 @@
+/*
+
+  CREATE FUNCTION FOR CHECKING FILES BEFORE RUNNING APP (IMPORTANT)
+  by aket0r
+
+*/
+
+
 const { app, BrowserWindow, Tray, Menu } = require('electron');
 const path = require('path');
 
