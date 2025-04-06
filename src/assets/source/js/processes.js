@@ -30,8 +30,9 @@ class ProcessesMethods {
 
         const { pid, ppid, name } = process;
         const path = document.querySelector("#processes__page table .container");
-        const processLengthElement = document.querySelector("#processes__page .processes-length")
+        const processLengthElement = document.querySelector("#processes__page #processes-title");
         const element = document.createElement("tr");
+        element.classList.add("active");
         element.innerHTML = 
         `
             <td>${index}</td>
@@ -40,7 +41,7 @@ class ProcessesMethods {
             <td title="${name}">${name}</td>
         `
         path.append(element);
-        processLengthElement.innerHTML = `${index} <strong title="Loading time">(${ms} ms.)</strong>`;
+        processLengthElement.innerHTML = `Processes: <span class="processes-length">${index}</span> <strong title="Loading time">(${ms} ms.)</strong>`;
     }
 }
 
