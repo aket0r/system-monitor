@@ -40,10 +40,13 @@
 
     <main>
         <section id="processes__page">
-            <h2>processes: <span class="processes-length">0</span></h2>
-            <table class="container">
+            <h2 id="processes-title">processes: <span class="processes-length">0</span></h2>
+            <div class="search-bar">
+                <input type="text" id="search-process" placeholder="process">
+            </div>
+            <table class="container">   
                 <tr class="title">
-                    <td>#1 
+                    <td>ID
                         <button class="sort sort-by-id">
                             <i class="fa-solid fa-sort"></i></button></td>
                     <td>pid 
@@ -64,9 +67,9 @@
         </section>
 
         <section id="os-info">
-            <h2>OS Info <strong class="loading-time">0</strong></h2>
+            <h2>OS Info <strong class="loading-time" title="Loading time"></strong></h2>
             <div class="container">
-                <ul>
+                <ul class="user">
                     <h3>User</h3>
                     <li class="username">
                         <span class="title">username</span>
@@ -89,7 +92,7 @@
                         <span class="context">-</span>
                     </li>
                 </ul>
-                <ul>
+                <ul class="system">
                     <h3>System</h3>
                     <li class="machine">
                         <span class="title">machine</span>
@@ -116,24 +119,11 @@
                         <span class="context">-</span>
                     </li>
                 </ul>
-                <ul>
-                    <h3>Network</h3>
-                    <li class="ethernet-0">
-                        <span class="title">ethernet-0</span>
-                        <span class="context">-</span>
-                    </li>
-                    <li class="ethernet-1">
-                        <span class="title">ethernet-1</span>
-                        <span class="context">-</span>
-                    </li>
-                    <li class="wifi-0">
-                        <span class="title">wifi-0</span>
-                        <span class="context">-</span>
-                    </li>
-                    <li class="wifi-1">
-                        <span class="title">wifi-1</span>
-                        <span class="context">-</span>
-                    </li>
+                <ul class="network">
+                    <h3>Network <span class="length">(loading...)</span></h3>
+                    <div class="container">
+
+                    </div>
                 </ul>
             </div>
         </section>
@@ -141,5 +131,6 @@
 
     <script src="assets/source/js/main.js"></script>
     <script src="assets/source/js/processes.js"></script>
+    <script src="assets/source/js/animations.js"></script>
 </body>
 </html>

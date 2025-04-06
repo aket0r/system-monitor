@@ -5,6 +5,19 @@
 
 */
 
+const SANDBOX_CONFIG = {
+  isReady: false,
+  runningTime: new Date().toLocaleString(),
+  network: {
+    connected: false,
+    date: new Date().toLocaleString()
+  }
+}
+
+
+const INITIALIZATION_REQUIREMENT_FILES = function() {
+  // ...
+}
 
 const { app, BrowserWindow, Tray, Menu } = require('electron');
 const path = require('path');
