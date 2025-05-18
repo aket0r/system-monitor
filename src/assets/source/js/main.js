@@ -35,6 +35,13 @@ class Content {
   }
 
   async getSystemInformation(methodName, key) {
+    if (methodName === undefined || methodName === null || methodName === "observe") {
+      console.error(`Method "${methodName}" is not provided`);
+      return;
+    } else {
+      console.log(`Loading ${methodName}...`);
+    }
+
     try {
       const data = await si[methodName]();
       SYSTEM_INFORMATION[key] = data;
@@ -86,6 +93,7 @@ class Content {
     ];
 
     const promises = highPriorityMethods.map(async (method) => {
+      if (method === "get") return;
       await this.getSystemInformation(method, method);
     });
 
@@ -110,6 +118,7 @@ class Content {
 
       await Promise.all(
         batch.map(async (method) => {
+          if (method === "get") return;
           await this.getSystemInformation(method, method);
         })
       );
