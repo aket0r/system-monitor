@@ -23,13 +23,10 @@
                     <button id="processes">processes</button>
                 </li>
                 <li>
-                    <button id="history">history</button>
+                    <button id="history">logs</button>
                 </li>
                 <li>
                     <button id="config">config</button>
-                </li>
-                <li>
-                    <button id="debug">debug</button>
                 </li>
                 <li>
                     <button id="console_dev">console/dev</button>
@@ -122,11 +119,13 @@
                 <ul class="network">
                     <h3>Network <span class="length">(loading...)</span></h3>
                     <div class="search-bar">
-                        <input type="text" id="search-network" placeholder="network, ip, mac">
-                    </div>
-                    <div class="container">
+                        <input type="text" id="search-network" placeholder="search...">
+                        <button class="type-of-show"><i class="fa-solid fa-eye"></i></button>
 
+                        <!-- <i class="fa-solid fa-eye-slash"></i> -->
+                        <span class="network-length"></span>
                     </div>
+                    <div class="container"></div>
                 </ul>
             </div>
         </section>
