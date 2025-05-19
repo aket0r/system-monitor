@@ -29,7 +29,49 @@ function searchProcess(e) {
 }
 
 
-const searchInput = document.querySelector("#search-process");
-searchInput.addEventListener("input", function(event) {
-    searchProcess(event);
+
+const searchInput = document.querySelector("#search-network");
+
+searchInput.addEventListener("input", function() {
+    const elements = document.querySelectorAll("#os-info .network .container > li");
+    const hiddenElements = document.querySelectorAll("#os-info .network .container > li.hidden");
+    const message = document.querySelector("#os-info .network .container li.hidden-message");
+
+    if (hiddenElements.length === elements.length) {
+        message.classList.remove("hidden");
+        message.classList.add("active");
+    } else {
+        message.classList.remove("active");
+        message.classList.add("hidden");
+    }
+
+    if (this.value === "") {
+        elements.forEach((el) => {
+            el.classList.remove("hidden");
+        });
+        message.classList.remove("active");
+        message.classList.add("hidden");
+        return;
+    }
+
+    elements.forEach((el) => {
+        const text = el.innerText.toLowerCase();
+        if (text.indexOf(this.value.toLowerCase()) > -1) {
+            el.classList.remove("hidden");
+        } else {
+            el.classList.add("hidden");
+        }
+    });
+});
+
+
+const valuesMode = document.querySelector(".type-of-show");
+valuesMode.addEventListener("click", function() {
+    const elements = document.querySelectorAll("#os-info .network .container > li");
+    elements.forEach((el) => {
+        el.classList.toggle("easy-mode");
+    });
+
+    let icon = this.querySelector('i');
+    icon.className = icon.className === "fa-solid fa-eye" ? "fa-solid fa-eye-slash" : "fa-solid fa-eye";
 });

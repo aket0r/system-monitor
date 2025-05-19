@@ -224,6 +224,37 @@ main section#os-info ul {
     height: 200px;
     padding: 5px 10px;
     margin: 10px 0;
+    overflow-y: auto;
+}
+
+
+main section#os-info ul .search-bar {
+    position: relative;
+}
+
+main section#os-info ul input {
+    padding: 5px 10px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 200;
+    margin-left: 0.5rem;
+}
+
+main section#os-info ul button {
+    position: absolute;
+    left: calc(20% + 10px);
+    padding: 5px 10px;
+    outline: none;
+    background-color: #222;
+    border: 1px solid #ddd;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 200;
+    margin-left: 0.5rem;
+    cursor: pointer;
 }
 
 main section#os-info ul li {
@@ -273,11 +304,43 @@ main section#os-info ul.network li span.none {
     color: crimson;
 }
 
+main section#os-info ul.network li.hidden {
+    display: none;
+}
+
+main section#os-info ul.network li.easy-mode {
+    display: flex;
+    opacity: 1;
+}
+main section#os-info ul.network li.easy-mode.hidden {
+    opacity: 0.5;
+}
+
 main section#os-info ul.network {
     min-height: 350px;
 }
 main section#os-info ul.network .container {
-    overflow-y: auto;
-    min-height: 300px;
-    height: 300px;
+    height: 260px;
+}
+
+main section#os-info ul.network .hidden-message {
+    display: none !important;
+}
+
+main section#os-info ul.network .hidden-message img {
+    width: 150px;
+    filter: invert(1);
+}
+
+main section#os-info ul.network .hidden-message.active {
+    text-align: center;
+    border: none;
+    padding: 10px;
+    min-height: 250px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    text-transform: lowercase;
+    color: skyblue;
+    flex-direction: column;
 }
